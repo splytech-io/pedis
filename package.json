@@ -1,0 +1,30 @@
+{
+  "name": "@nook/pedis",
+  "version": "1.0.0",
+  "description": "Pedis is promiserify redis module",
+  "main": "index.js",
+  "dependencies": {
+    "redis": "^2.6.0-2",
+    "redis-commands": "^1.2.0"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.3",
+    "mocha": "^2.5.3"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec --bail --check-leaks",
+    "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks",
+    "test-tap": "mocha --require test/support/env --reporter tap --check-leaks"
+  },
+  "keywords": [
+    "redis",
+    "promise",
+    "then"
+  ],
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "author": "Nook Scheel <nook@live.ru>",
+  "license": "MIT"
+}
